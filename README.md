@@ -7,6 +7,4 @@ Sample usage:
 
 UITextField *weightTextField;
 
-UIToolbar* numberToolbar = [[DoneCancelNumberPadToolbar alloc] initWithTextField:weightTextField];
-
-weightTextField.inputAccessoryView = numberToolbar;
+weightTextField.inputAccessoryView = [[DoneCancelNumberPadToolbar alloc] initWithTextField:weightTextField];
