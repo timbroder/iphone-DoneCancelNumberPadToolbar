@@ -1,4 +1,4 @@
-Sample usage:
+//Sample usage:
 
 //In the view controller that's going ot use the component, put this in the header after the class being extended.
 <DoneCancelNumberPadToolbarDelegate>
