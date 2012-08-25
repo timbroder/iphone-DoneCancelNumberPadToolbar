@@ -9,6 +9,8 @@
 
 @implementation DoneCancelNumberPadToolbar
 
+@synthesize delegate;
+
 - (id) initWithTextField:(UITextField *)aTextField
 {
     self = [super initWithFrame:CGRectMake(0, 0, 320, 50)];
@@ -37,11 +39,18 @@
 {
     [textField resignFirstResponder];
     textField.text = @"";
+    [self.delegate doneCancelNumberPadToolbarDelegate:self didClickCancel:textField];
 }
 
 -(void)doneWithNumberPad
 {
     [textField resignFirstResponder];
+    [self.delegate doneCancelNumberPadToolbarDelegate:self didClickDone:textField];
 }
+@end
+
+@property (nonatomic, weak) id <DoneCancelNumberPadToolbarDelegate> delegate;
+
+- (id) initWithTextField:(UITextField *)textField;
 
 @end
