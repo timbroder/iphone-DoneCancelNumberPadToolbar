@@ -48,9 +48,3 @@
     [self.delegate doneCancelNumberPadToolbarDelegate:self didClickDone:textField];
 }
 @end
-
-@property (nonatomic, weak) id <DoneCancelNumberPadToolbarDelegate> delegate;
-
-- (id) initWithTextField:(UITextField *)textField;
-
-@end
