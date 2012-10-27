@@ -22,4 +22,5 @@
 {
     UITextField* textField;
 }
+- (id) initWithTextField:(UITextField *)aTextField;
 @end
