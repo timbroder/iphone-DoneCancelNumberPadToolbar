@@ -1,5 +1,5 @@
 //
-//  ApplyCancelNumberPadUIToolbar.m
+//  DoneCancelNumberPadToolbar.m
 //
 //  Created by Timothy Broder on 8/17/12.
 //
@@ -13,9 +13,15 @@
 
 - (id) initWithTextField:(UITextField *)aTextField
 {
+    return [self initWithTextField:aTextField withKeyboardType:UIKeyboardTypeNumberPad];
+}
+
+- (id) initWithTextField:(UITextField *)aTextField withKeyboardType:(int)keyboardType
+{
     self = [super initWithFrame:CGRectMake(0, 0, 320, 50)];
     if (self) {
         textField = aTextField;
+        [textField setKeyboardType:keyboardType];
         self.barStyle = UIBarStyleBlackTranslucent;
         self.items = [NSArray arrayWithObjects:
                       [[UIBarButtonItem alloc]initWithTitle:@"Cancel"
@@ -47,10 +53,4 @@
     [textField resignFirstResponder];
     [self.delegate doneCancelNumberPadToolbarDelegate:self didClickDone:textField];
 }
-@end
-
-@property (nonatomic, weak) id <DoneCancelNumberPadToolbarDelegate> delegate;
-
-- (id) initWithTextField:(UITextField *)textField;
-
 @end

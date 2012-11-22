@@ -1,5 +1,5 @@
 //
-//  ApplyCancelNumberPadUIToolbar.h
+//  DoneCancelNumberPadToolbar.h
 //
 //  Created by Timothy Broder on 8/17/12.
 //  Based on http://stackoverflow.com/a/11382326/647343 by Luda
@@ -22,3 +22,7 @@
 {
     UITextField* textField;
 }
+@property (nonatomic, weak) id <DoneCancelNumberPadToolbarDelegate> delegate;
+- (id) initWithTextField:(UITextField *)aTextField;
+- (id) initWithTextField:(UITextField *)aTextField withKeyboardType:(int)keyboardType;
+@end
