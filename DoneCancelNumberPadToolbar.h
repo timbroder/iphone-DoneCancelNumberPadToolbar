@@ -24,4 +24,5 @@
 }
 @property (nonatomic, weak) id <DoneCancelNumberPadToolbarDelegate> delegate;
 - (id) initWithTextField:(UITextField *)aTextField;
+- (id) initWithTextField:(UITextField *)aTextField withKeyboardType:(int)keyboardType;
 @end

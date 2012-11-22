@@ -13,9 +13,15 @@
 
 - (id) initWithTextField:(UITextField *)aTextField
 {
+    return [self initWithTextField:aTextField withKeyboardType:UIKeyboardTypeNumberPad];
+}
+
+- (id) initWithTextField:(UITextField *)aTextField withKeyboardType:(int)keyboardType
+{
     self = [super initWithFrame:CGRectMake(0, 0, 320, 50)];
     if (self) {
         textField = aTextField;
+        [textField setKeyboardType:keyboardType];
         self.barStyle = UIBarStyleBlackTranslucent;
         self.items = [NSArray arrayWithObjects:
                       [[UIBarButtonItem alloc]initWithTitle:@"Cancel"
