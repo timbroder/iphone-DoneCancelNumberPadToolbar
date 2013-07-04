@@ -22,7 +22,7 @@
     if (self) {
         textField = aTextField;
         [textField setKeyboardType:keyboardType];
-        self.barStyle = UIBarStyleBlackTranslucent;
+        self.barStyle = UIBarStyleDefault;
         self.items = [NSArray arrayWithObjects:
                       [[UIBarButtonItem alloc]initWithTitle:@"Cancel"
                                                       style:UIBarButtonItemStyleBordered
